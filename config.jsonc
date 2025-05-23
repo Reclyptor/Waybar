@@ -1,0 +1,59 @@
+{
+    "margin": "5 20 0 20",
+    "modules-left": [
+        "custom/launcher",
+        "custom/spotify"
+    ],
+    "modules-center": [
+        "clock"
+    ],
+    "modules-right": [
+        "network",
+        "pulseaudio",
+        "tray"
+    ],
+    "custom/launcher": {
+        "format": " \uf32e  ",
+        "interval": 7200,
+        "on-click": "wofi --show drun",
+        "signal": 8
+    },
+    "custom/spotify": {
+        "format": "\uf1bc  {}",
+        "interval": 1,
+        "on-click": "spotify",
+        "exec": "~/.config/waybar/scripts/spotify.sh"
+    },
+    "clock": {
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format": "{:%A | %d %b %Y | %H:%M:%S}",
+	"interval": 1
+    },
+    "custom/cava": {
+        "format": "{}",
+        "exec": "~/.config/waybar/scripts/cava.sh"
+    },
+    "network": {
+        "format-wifi": "\udb82\udd28  {essid} ({signalStrength}%)",
+        "format-ethernet": "\udb80\ude01 Ethernet",
+        "format-disconnected": "\udb82\udd2d Disconnected",
+        "on-click": "/home/lostfromlight/.config/waybar/scripts/nmtui.sh"
+    },
+    "pulseaudio": {
+        "reverse-scrolling": 1,
+        "format": "{volume}% {icon}",
+        "format-bluetooth": "{volume}% {icon}",
+        "format-muted": " {format_source}",
+        "format-source-muted": "Muted 🚫",
+        "format-icons": {
+            "headphone": "🎧",
+            "default": ["🔈", "🔉", "🔊"]
+        },
+        "on-click": "pavucontrol",
+        "min-length": 13
+    },
+    "tray": {
+        "icon-size": 16,
+        "spacing": 4
+    }
+}
