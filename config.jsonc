@@ -21,17 +21,13 @@
     "custom/spotify": {
         "format": "\uf1bc  {}",
         "interval": 1,
-        "on-click": "spotify",
-        "exec": "~/.config/waybar/scripts/spotify.sh"
+        "on-click": "~/.config/waybar/scripts/spotify/spotify_play_pause.sh",
+        "exec": "~/.config/waybar/scripts/spotify/spotify_status.sh"
     },
     "clock": {
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format": "{:%A | %d %b %Y | %H:%M:%S}",
 	"interval": 1
-    },
-    "custom/cava": {
-        "format": "{}",
-        "exec": "~/.config/waybar/scripts/cava.sh"
     },
     "network": {
         "format-wifi": "\udb82\udd28  {essid} ({signalStrength}%)",
